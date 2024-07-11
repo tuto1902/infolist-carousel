@@ -1,1 +1,1 @@
-import './../../../carousel/resources/js/index'
+import './../../../carousel/resources/dist/carousel'
