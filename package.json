@@ -1,0 +1,19 @@
+{
+  "name": "infolist-carousel",
+  "version": "1.0.0",
+  "description": "Infolist Carousel",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "esbuild": "^0.21.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

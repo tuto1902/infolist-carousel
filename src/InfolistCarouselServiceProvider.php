@@ -21,4 +21,11 @@ class InfolistCarouselServiceProvider extends PackageServiceProvider
             ->name('infolist-carousel')
             ->hasViews();
     }
+
+    public function packageBooted()
+    {
+        FilamentAsset::register([
+            Js::make('infolists/components/carousel', __DIR__ . '/../resources/dist/carousel.js')
+        ], 'tuto1902/infolist-carousel');
+    }
 }
