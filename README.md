@@ -5,6 +5,10 @@
 
 Infolist Carousel entry that allows you to add a slide carousel to any of you Filament v3 projects.
 
+## Screenshots
+
+![infolist-carousel](https://github.com/tuto1902/infolist-carousel/assets/2152532/e742f4bf-02b3-4a0d-a3ea-e3afa678d303)
+
 ## Installation
 
 You can install the package via composer:
