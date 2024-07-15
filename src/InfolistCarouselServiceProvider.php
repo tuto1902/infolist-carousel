@@ -3,6 +3,7 @@
 namespace Tuto1902\InfolistCarousel;
 
 use Filament\Support\Assets\Js;
+use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -25,7 +26,8 @@ class InfolistCarouselServiceProvider extends PackageServiceProvider
     public function packageBooted()
     {
         FilamentAsset::register([
-            Js::make('infolists/components/carousel', __DIR__ . '/../resources/dist/carousel.js')
+            Js::make('infolists/components/carousel', __DIR__ . '/../resources/dist/carousel.js'),
+            Css::make('infolists/carousel', __DIR__ . '/../resources/dist/carousel.css')
         ], 'tuto1902/infolist-carousel');
     }
 }
