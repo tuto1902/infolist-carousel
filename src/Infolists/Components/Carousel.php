@@ -14,6 +14,7 @@ class Carousel extends Entry
     protected bool|Closure $isLoopingEnabled = true;
     protected bool|Closure $isAutoplayEnabled = false;
     protected int|Closure $autoplayDelay = 4000;
+    protected int|Closure $scrollDuration = 20;
     protected CarouselSize|string|Closure $carouselSize = CarouselSize::Large;
     protected CarouselOrientation|Closure $carouselOrientation = CarouselOrientation::Horizontal;
     private string $defaultSlideView = 'infolist-carousel::infolists.components.carousel-slide';
@@ -33,6 +34,13 @@ class Carousel extends Entry
     public function orientation(CarouselOrientation|Closure $orientation): static
     {
         $this->carouselOrientation = $orientation;
+
+        return $this;
+    }
+
+    public function duration(int|Closure $duration): static
+    {
+        $this->scrollDuration = $duration;
 
         return $this;
     }
@@ -74,6 +82,12 @@ class Carousel extends Entry
     {
         $orientation = $this->evaluate($this->carouselOrientation);
         return $orientation->value;
+    }
+
+    public function getDuration()
+    {
+       $duration = $this->evaluate($this->scrollDuration);
+       return $duration;
     }
 
     public function getAutoplay()

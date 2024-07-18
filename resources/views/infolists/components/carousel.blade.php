@@ -15,6 +15,7 @@ $stateArray = \Illuminate\Support\Arr::wrap($stateArray);
             :autoplay="$getAutoplay()"
             :delay="$getDelay()"
             :size="$getSize()"
+            :duration="$getDuration()"
         >
             @foreach($stateArray as $state)
             <x-carousel::carousel.slide>
